@@ -1,11 +1,13 @@
-import '/styles/style.css'
+import '../styles/style.css'
 
-import * as THREE from 'three';
-import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader.js';
+import * as THREE from '../../node_modules/three';
+import {GLTFLoader} from '../../node_modules/three/examples/jsm/loaders/GLTFLoader.js';
 
 
-import {OrbitControls} from 'three/addons/controls/OrbitControls.js'
+import {OrbitControls} from '../../node_modules/three/examples/jsm/controls/OrbitControls'
 
+
+console.log("this si playing");
 
 
 // first section
@@ -39,14 +41,13 @@ const loader = new GLTFLoader();
     u_helmet_texture: { value: null }
   };
 
-let texture1 = new THREE.TextureLoader('/static/cart.png');
 
 
 
 
 //room
 var room = new THREE.Object3D();
-loader.load('/Models/websiteRoomClosed.gltf', (model) => {
+loader.load('/static/Models/websiteRoomClosed.gltf', (model) => {
   room = model.scene;
   room.traverse( function ( child ) {
             if ( child.isMesh ) {
