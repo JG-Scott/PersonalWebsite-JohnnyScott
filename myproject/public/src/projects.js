@@ -14,8 +14,8 @@ let projects = [
         tags: 'Unity/C#, Blender, Gimp, game',
         video: 'https://www.youtube.com/embed/PJ9JRmcD2h0',
         github: 'https://github.com/JG-Scott',
-        imageGallery: '/static/seraph.png',
-        imageSingular: '/static/seraph.png'
+        imageGallery: '/static/seraph.jpeg',
+        imageSingular: '/static/seraph.jpeg'
     },   
     {
         name: 'Mini Miner Men',
