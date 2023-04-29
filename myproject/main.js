@@ -1,4 +1,4 @@
-import './style.css'
+import '/style.css'
 
 import * as THREE from 'three';
 import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader.js';
@@ -39,14 +39,14 @@ const loader = new GLTFLoader();
     u_helmet_texture: { value: null }
   };
 
-let texture1 = new THREE.TextureLoader('./static/cart.png');
+let texture1 = new THREE.TextureLoader('/static/cart.png');
 
 
 
 
 //room
 var room = new THREE.Object3D();
-loader.load('./Models/websiteRoomClosed.gltf', (model) => {
+loader.load('/Models/websiteRoomClosed.gltf', (model) => {
   room = model.scene;
   room.traverse( function ( child ) {
             if ( child.isMesh ) {
