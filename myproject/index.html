@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Johnny Scott</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <img src="static/logo2.png" class="logo" alt="" />
+
+        <ul class="links-container">
+          <li class="link-items">
+            <a href="#topSection" class="links">Home</a>
+          </li>
+          <li class="link-items">
+            <a href="#projectSection" class="links">Projects</a>
+          </li>
+          <li class="link-items">
+            <a href="#aboutmeSection" class="links">About</a>
+          </li>
+          <li class="link-items"><a href="#" class="links">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="topSection">
+      <div class="topContent">
+        <h1 class="topHeadline">Welcome to my Website</h1>
+        <p class="topSecondary">My name is Johnny</p>
+      </div>
+    </main>
+
+    <section id="projectSection">
+      <h1 class="sectionTitle">Projects</h1>
+      <p class="sectionSecondary">A few projects ive worked on.</p>
+      <div class="filters">
+        <button class="filterBtn active" data-filter-value="game">Games</button>
+        <button class="filterBtn" data-filter-value="tech">Tech</button>
+      </div>
+
+      <div class="projectGallery"></div>
+
+      <div id="projectInfo">
+        <div class="projectDetails">
+          <img src="static/squaredyCat.png" class="image" alt="" />
+          <h2 class="name">Project name</h2>
+          <p class="details">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
+            atque nulla, distinctio neque qui repellat sequi quasi asperiores
+            iste. Atque rerum magnam suscipit nam nulla perspiciatis ratione
+            vitae. Dicta, cupiditate.
+          </p>
+          <div class="btnGroup">
+            <a href="#" target="_blank" class="btn light" id="gitBtn">GitHub</a>
+            <a href="#" target="_blank" class="btn transparent" id="itchBtn"
+              >Itch.io</a
+            >
+          </div>
+        </div>
+        <div class="videoSection">
+          <iframe
+            class="video"
+            width="672"
+            height="378"
+            src="https://www.youtube.com/embed/urQ51v-mU5M?start=850"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section id="aboutmeSection">
+      <h1 class="sectionTitle">About Me</h1>
+      <p class="sectionSecondary">My Skills, Experiences and Education</p>
+      <div class="aboutMeContainer">
+        <div class="aboutMeImageContainer">
+          <img src="./static/bodyshot.jpg" class="aboutImg" alt="" />
+          <a
+            href="./static/JohnnyScottresume.pdf"
+            class="btn light download-btn"
+            download
+            >Download Resume</a
+          >
+        </div>
+        <div class="personalInfo">
+          <h2 class="title">Personal Info</h2>
+          <p>
+            My name is Johnny Scott and I am a 24 year old BCIT CST Graduate who
+            is currently enrolled in BCIT’s Bachelor of Technology program
+            majoring in Game Development. [something that says that im like
+            trained in other forms of coding but I have always been drawn game
+            developement] [Beside that i like spending time researching anything
+            coding. Always something new and interesting happening all that Also
+            i enjoy modeling and creating 3d art in blender]
+          </p>
+          <h2 class="title">Education</h2>
+          <p>
+            <b
+              >Bachelor of Technology in Computer Systems, Game Development
+              Option</b
+            >
+            <br />
+            <span class="sectionSecondary"
+              >British Columbia Institute of Technology <br />
+              September 2022 - May 2024</span
+            >
+          </p>
+          <p>
+            <b>Computer Systems Technology Diploma, with Distinction</b> <br />
+            <span class="sectionSecondary"
+              >British Columbia Institute of Technology <br />
+              September 2019 - May 2021</span
+            >
+          </p>
+          <h2 class="title">Skills</h2>
+          <div class="skillSection">
+            <div class="skillList">
+              <h2 class="title small">Profficient Languages</h2>
+              <ul class="list">
+                <li class="listItem"><p>C#</p></li>
+                <li class="listItem"><p>C++</p></li>
+                <li class="listItem"><p>Java</p></li>
+                <li class="listItem"><p>Javascript/Typescript</p></li>
+                <li class="listItem"><p>React/MaterialUI</p></li>
+                <li class="listItem"><p>Node.js</p></li>
+                <li class="listItem"><p>SQL</p></li>
+              </ul>
+            </div>
+            <div class="toolList">
+              <h2 class="title small">Profficient Tools</h2>
+              <ul class="list">
+                <li class="listItem"><p>Unity</p></li>
+                <li class="listItem"><p>Blender</p></li>
+                <li class="listItem"><p>Gimp</p></li>
+                <li class="listItem"><p>Aseprite</p></li>
+                <li class="listItem"><p>Git/Github</p></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 
+
+  <canvas id="bg"></canvas> -->
+
+    <!-- <script id="vertexShader" type="x-shader/x-vertex">
+attribute vec2 uv1;
+attribute vec4 tangent;
+
+uniform mat4 _mv; // model-view matrix
+uniform mat4 _mvProj; // model-view-projection matrix
+uniform mat3 _norm; // normal matrix
+uniform float _time; // time in seconds
+
+varying vec2 Vuv;
+varying vec3 n;
+
+void main(void) {
+	// compute position
+	gl_Position = projectionMatrix * vec4(position, 1.0);
+
+	Vuv = uv1;
+	// compute light info
+	n = normalize(normalMatrix * normal);
+}
+</script>
+
+  <script id="fragmentShader" type="x-shader/x-fragment">
+precision highp float;
+
+varying vec3 n;
+varying vec2 Vuv;
+
+uniform sampler2D u_helmet_texture;
+
+
+//#pragma include "noise2D.glsl // for snoise(vec2 v)
+//#pragma include "noise3D.glsl" //  for snoise(vec3 v)
+//#pragma include "noise4D.glsl" //  for snoise(vec4 v)
+//#pragma include "cellular2D.glsl" //  for cellular(vec2 P)
+//#pragma include "cellular2x2.glsl" //  for cellular2x2(vec2 P)
+//#pragma include "cellular2x2x2.glsl" //  for cellular2x2x2(vec3 P)
+//#pragma include "cellular3D.glsl" //  cellular(vec3 P)
+
+void main(void)
+{
+    vec3 eyeSpaceLigthDirection = vec3(0.0,0.0,1.0);
+    float diffuse = max(0.0,dot(normalize(n),eyeSpaceLigthDirection));
+	  gl_FragColor = vec4(texture2D(u_helmet_texture,Vuv).xyz*diffuse,1.0);
+    //gl_FragColor = vec4(n,1.0);
+}
+
+</script> -->
+
+    <script type="module" src="/main.js"></script>
+    <script src="/projects.js"></script>
+    <script src="/app.js"></script>
+  </body>
+</html>

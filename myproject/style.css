@@ -1,0 +1,366 @@
+@import url("https://use.typekit.net/jmk3xov.css");
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html{
+  font-family: 'Inter', sans-serif;
+
+  font-size: 16px;
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+
+body{
+  background-color: #000000;
+  overflow-x: hidden;
+}
+
+nav{
+  position:fixed;
+  top:0;
+  width: 100%;
+  height: 100px;
+  padding: 20px 10vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 9;
+  transition: 0.5s;
+}
+
+nav.bg {
+  background-color: #000000;
+}
+
+.logo{
+  height: 50px;
+}
+
+.links-container{
+  display: flex;
+  list-style: none;
+  gap: 10px;
+}
+
+.links{
+  color: #fff;
+  text-decoration: none;
+  text-transform: capitalize;
+  padding: 10px 20px;
+  -webkit-transition:1.5s;
+  transition: 0.5s;
+}
+
+.links:hover {
+  opacity: 0.5;
+}
+
+#topSection{
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+
+}
+
+#topSection  canvas{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.topContent {
+  position: relative;
+  z-index: 2;
+}
+
+
+.topHeadline{
+  font-size: 4.5rem;
+  text-align: center;
+}
+
+.topSecondary{
+  text-align: center;
+  margin: 25px 0 50px;
+  font-size: 1.2rem;
+}
+
+
+section{
+  padding: 60px 10vw;
+
+}
+
+.sectionTitle{
+  text-align: center;
+  color: #fff;
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
+}
+
+#aboutmeText{
+  font-size: 16px;
+  color: #fff;
+}
+
+#bioDiv{
+  width: 100%;
+  height: 100px;
+  padding: 10px 20vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 9;
+  transition: 0.5s;
+}
+
+.sectionSecondary {
+  text-align: center;
+  width: 50%;
+  min-width: 300px;
+  color: #fff;
+  opacity: 0.5;
+  margin: 3.5rem auto;
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+}
+
+.filters{
+  margin: 100px 0 50px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.filterBtn {
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  border: none;
+  color: #fff;
+  background: transparent;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.filterBtn.active, .filterBtn:hover {
+  color: #000000;
+  background: #fff;
+}
+
+
+.btn {
+  padding: 15px 30px;
+  width: fit-content;
+  background: #000000;
+  color: #fff;
+  text-decoration: none;
+  text-transform: capitalize;
+  display: block;
+  margin: auto;
+}
+
+.btn.light{
+  background: #fff;
+  color: #000000;
+}
+
+.btn.transparent{
+  background: transparent;
+  border: 2px solid #fff;
+}
+
+/* project gallery */
+
+.projectGallery{
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  gap: 20px;
+  position: relative;
+}
+
+.projectCard{
+  position: relative;
+  height: 200px;
+}
+
+.projectCard.active {
+  border: 10px solid #fff;
+}
+
+.projectCard:not(.active):hover .tags{
+  opacity: 1;
+}
+
+.projectCard:not(.active):hover .projectImg{
+  opacity: 0.5;
+  border: 2px solid #fff;
+}
+
+.projectImg{
+  width: 100%;
+  height: 100%;
+  object-fit:contain;
+  transition: 0.5s;
+}
+
+.tags{
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  color: #fff;
+  width: 90%;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.projectCard .active {
+  border: 10px solid #fff;
+}
+
+/* project info section */
+
+#projectInfo{
+  margin-top: 100px;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 40px;
+}
+
+.projectDetails {
+  overflow: hidden;
+}
+
+.image{
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.name{
+  color: #fff;
+  margin: 30px 0;
+  font-weight: 300;
+  font-size: 2rem;
+  text-transform: capitalize;
+  text-align: left;
+}
+
+.details{
+  color: #fff;
+  opacity: 0.5;
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.btnGroup{
+  font-weight: 700;
+  display: flex;
+  gap: 30px;
+}
+
+.btnGroup .btn{
+  margin: 0;
+}
+
+.videoSection{
+  display: grid;
+  align-content:space-between;
+
+}
+
+
+
+
+
+
+
+.aboutMeContainer{
+  margin-top: 100px;
+  display: flex;
+  gap: 100px;
+}
+
+.aboutMeImageContainer{
+  position: relative;
+  
+}
+
+.aboutImg{
+  width: 100%;
+  height: 100%;
+}
+
+.download-btn{
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  font-weight: 700;
+   font-size: 1.1rem;
+  transform: translateX(-50%);
+}
+
+.personalInfo{
+  position: relative;
+    color: #fff;
+}
+
+.title{
+  text-align: left;
+  color: #fff;
+  text-transform: capitalize;
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 40px;  
+}
+
+.title.small {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.personalInfo p{
+  margin: 30px 0;
+  font-size: 1.1rem;
+}
+
+.skillSection{
+  display: flex;
+  gap: 100px;
+}
+
+.list{
+    list-style: none;
+    gap: 10px;
+}
+
+
+.listItem{
+  color: #fff;
+  text-decoration: none;
+  text-transform: capitalize;
+  padding: 10px 20px;
+  transition: 0.5s;
+}
+
+.listItem p{
+  margin: 0;
+  font-size: 1.1rem;
+}
