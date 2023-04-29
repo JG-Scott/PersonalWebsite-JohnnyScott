@@ -5,8 +5,8 @@ let projects = [
         tags: 'Unity/C#, Blender, Gimp, game',
         video: 'https://www.youtube.com/embed/urQ51v-mU5M?start=850',
         github: 'https://github.com/JG-Scott',
-        imageGallery: '/static/squaredyCat.png',
-        imageSingular: '/static/squaredyCat.png'
+        imageGallery: '/public/static/squaredyCat.png',
+        imageSingular: '/public/static/squaredyCat.png'
     },
     {
         name: 'Seraphs Phlebotomy',
@@ -14,8 +14,8 @@ let projects = [
         tags: 'Unity/C#, Blender, Gimp, game',
         video: 'https://www.youtube.com/embed/PJ9JRmcD2h0',
         github: 'https://github.com/JG-Scott',
-        imageGallery: '/static/seraph.png',
-        imageSingular: '/static/seraph.png'
+        imageGallery: '/public/static/seraph.png',
+        imageSingular: '/public/static/seraph.png'
     },   
     {
         name: 'Mini Miner Men',
@@ -23,8 +23,8 @@ let projects = [
         tags: 'Unity/C#, Blender, Gimp, game',
         video: 'https://www.youtube.com/embed/_bbnwwJrc1Y',
         github: 'https://github.com/JG-Scott',
-        imageGallery: '/static/miniminermen.png',
-        imageSingular: '/static/miniminermen.png'
+        imageGallery: '/public/static/miniminermen.png',
+        imageSingular: '/public/static/miniminermen.png'
     },   
     {
         name: 'Reflector Knight',
@@ -32,8 +32,8 @@ let projects = [
         tags: 'Unity/C#, Blender, Gimp, game',
         video: 'https://www.youtube.com/embed/vOmTriRKQSk',
         github: 'https://github.com/JG-Scott',
-        imageGallery: '/static/reflectorknight.png',
-        imageSingular: '/static/reflectorknight.png'
+        imageGallery: '/public/static/reflectorknight.png',
+        imageSingular: '/public/static/reflectorknight.png'
     }
 ];
 
