@@ -1,29 +1,5 @@
 
-
-
-
-
-let projectCards = [...document.querySelectorAll('.projectCard')];
-
-
-let projectName = document.querySelector('.projectDetails .name');
-let projectImage = document.querySelector('.projectDetails .image');
-let projectDetails = document.querySelector('.projectDetails .details');
-let projectVideo = document.querySelector('.videoSection .video');
-
-let itchBtn = document.querySelector('#itchBtn');
-let gitBtn = document.querySelector('#gitBtn');
-
-
-
-
-
-
-
-
-
 let width = screen.width;
-console.log(screen.width);
 const projectInfo = document.querySelector('#projectInfo');
 //change project section when below 992
 if(width >= 992) {
@@ -33,7 +9,7 @@ if(width >= 992) {
             <img src="static/squaredyCat.png" class="image" alt="" />
             <iframe
               class="video"
-              src="https://www.youtube.com/embed/urQ51v-mU5M?start=850"
+              src="https://www.youtube.com/embed/PJ9JRmcD2h0"
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -75,7 +51,7 @@ if(width >= 992) {
           <div class="videoSection">
             <iframe
               class="video"
-              src="https://www.youtube.com/embed/urQ51v-mU5M?start=850"
+              src="https://www.youtube.com/embed/PJ9JRmcD2h0"
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -93,8 +69,36 @@ if(width >= 992) {
 
 
 
+let projectCards = [...document.querySelectorAll('.projectCard')];
+
+
+let projectName = document.querySelector('.projectDetails .name');
+let projectImage = document.querySelector('.projectDetails .image');
+let projectDetails = document.querySelector('.projectDetails .details');
+let projectVideo = document.querySelector('.videoSection .video');
+
+let itchBtn = document.querySelector('#itchBtn');
+let gitBtn = document.querySelector('#gitBtn');
+
+
+console.log(projectName);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 projectCards.map((project, i) => {
     project.addEventListener('click', () => {
+        
         projectCards.map(card => card.classList.remove('active'));
         project.classList.add('active');
 
@@ -154,6 +158,5 @@ toggleBtn.addEventListener('click', () => {
     toggleBtn.classList.toggle('active');
     linkContainer.classList.toggle('active');
 });
-
 
 

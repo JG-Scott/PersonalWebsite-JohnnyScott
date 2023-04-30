@@ -22,6 +22,8 @@ renderer.shadowMap.enabled = true;
 
 const topSection = document.querySelector('#topSection');
 
+renderer.domElement.setAttribute('class', 'canvas');
+renderer.domElement.removeAttribute('style');
 topSection.appendChild(renderer.domElement)
 
 

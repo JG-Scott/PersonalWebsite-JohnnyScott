@@ -9,7 +9,6 @@
 
 html{
   font-family: 'Inter', sans-serif;
-
   font-size: 16px;
   scroll-behavior: smooth;
   scroll-padding-top: 100px;
@@ -80,6 +79,11 @@ nav.bg {
   top: 0;
   left: 0;
   z-index: 1;
+}
+
+.canvas{
+  width: 100%;
+  height: 100%;
 }
 
 .topContent {
@@ -303,6 +307,7 @@ section{
 }
 
 .videoSection{
+  padding-top: 50px;
   width: 100%;
   height: 400px;
 }
@@ -371,6 +376,130 @@ section{
   display: flex;
   gap: 100px;
 }
+
+
+.skills{
+  position: relative;
+  margin: 100px 0;
+
+}
+.skillContainer{
+  margin: 100px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.skillCard{
+  width: 150px;
+  height: 200px;
+  background: #1a1a1a;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.skillImage{
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+
+}
+
+.skillName{
+  position: absolute;
+  color: #fff;
+  font-size: 1.2rem;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  width: 100%;
+  transition: 0.5s;
+  border-top: 5px solid #000000;
+
+}
+
+.skillCard::after, .skillCard::before{
+  content:'';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: #000000;
+  z-index: 2;
+  transform: rotate(45deg);
+}
+
+.skillCard::before{
+  bottom: -20px;
+  left: -20px;
+}
+
+.skillCard::after{
+  bottom: -20px;
+  right: -20px;
+}
+
+
+.skillCard:hover{
+  background: #000000;
+}
+
+
+
+.skillCard:nth-child(1):hover .skillName {
+  background: #904d8f;
+}
+
+
+
+.skillCard:nth-child(2):hover .skillName {
+  background: #659dd4;
+}
+
+.skillCard:nth-child(3):hover .skillName {
+  background: #862021;
+}
+
+.skillCard:nth-child(4):hover .skillName {
+  background: #f0dc50;
+}
+
+.skillCard:nth-child(5):hover .skillName {
+  background: #2a79c8;
+}
+
+.skillCard:nth-child(6):hover .skillName {
+  background: #62dcfb;
+}
+
+.skillCard:nth-child(7):hover .skillName {
+  background: #cdcdcd;
+  color: #000000;
+}
+
+.skillCard:nth-child(8):hover .skillName {
+  background: #ec7800;
+}
+
+.skillCard:nth-child(9):hover .skillName {
+  background: #504937;
+}
+
+.skillCard:nth-child(10):hover .skillName {
+  background: #f15030;
+}
+
+.skillCard:hover .skillImage{
+  transform: scale(1.1) translateY(-10px);
+}
+
+
 
 .list{
     list-style: none;
@@ -527,8 +656,8 @@ textarea{
     height: 150px;
   }
 
-  .projectDetails{
-
+  .btnGroup{
+    justify-content: center;
   }
 
   .aboutMeContainer{
@@ -649,10 +778,22 @@ textarea{
     grid-template-columns: repeat(2,1fr);
   }
 
+  .skillCard{
+    width: 120px;
+    height: 190px;
+    padding: 10px 0;
+  }
 
+  .skillImage{
+    width: 70px;
+  }
+  
+  
   .contactDetails{
     grid-template-columns: repeat(1,1fr);
   }
+
+
   
   
 
@@ -682,5 +823,11 @@ textarea{
   input:nth-child(1) {
     margin-bottom: 0;
   }
+
+  .contactForm .btn{
+    width: 100%;
+  }
+
+
   
 }
