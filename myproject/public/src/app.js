@@ -1,3 +1,8 @@
+
+
+
+
+
 let projectCards = [...document.querySelectorAll('.projectCard')];
 
 
@@ -8,6 +13,85 @@ let projectVideo = document.querySelector('.videoSection .video');
 
 let itchBtn = document.querySelector('#itchBtn');
 let gitBtn = document.querySelector('#gitBtn');
+
+
+
+
+
+
+
+
+
+let width = screen.width;
+console.log(screen.width);
+const projectInfo = document.querySelector('#projectInfo');
+//change project section when below 992
+if(width >= 992) {
+    console.log(width)
+    projectInfo.innerHTML = `<div class="projectDetails">
+          <div class="imageVideo">
+            <img src="static/squaredyCat.png" class="image" alt="" />
+            <iframe
+              class="video"
+              src="https://www.youtube.com/embed/urQ51v-mU5M?start=850"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <h2 class="name">Project name</h2>
+          <p class="details">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
+            atque nulla, distinctio neque qui repellat sequi quasi asperiores
+            iste. Atque rerum magnam suscipit nam nulla perspiciatis ratione
+            vitae. Dicta, cupiditate.
+          </p>
+          <div class="btnGroup">
+            <a href="#" target="_blank" class="btn light" id="gitBtn">GitHub</a>
+            <a href="#" target="_blank" class="btn transparent" id="itchBtn"
+              >Itch.io</a
+            >
+          </div>
+        </div>`
+} else {
+    projectInfo.innerHTML=`        <div class="projectDetails">
+          <div class="imageDescription">
+            <img src="static/squaredyCat.png" class="image" alt="" />
+            <h2 class="name">Project name</h2>
+            <p class="details">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
+              atque nulla, distinctio neque qui repellat sequi quasi asperiores
+              iste. Atque rerum magnam suscipit nam nulla perspiciatis ratione
+              vitae. Dicta, cupiditate.
+            </p>
+          </div>
+          <div class="btnGroup">
+            <a href="#" target="_blank" class="btn light" id="gitBtn">GitHub</a>
+            <a href="#" target="_blank" class="btn transparent" id="itchBtn"
+              >Itch.io</a
+            >
+          </div>
+          <div class="videoSection">
+            <iframe
+              class="video"
+              src="https://www.youtube.com/embed/urQ51v-mU5M?start=850"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>`;
+}
+
+
+
+
+
+
+
 
 projectCards.map((project, i) => {
     project.addEventListener('click', () => {
@@ -39,7 +123,6 @@ filters.map((btn, i) => {
     btn.addEventListener('click', () => {
         filters.map(item => item.classList.remove('active'));
         btn.classList.add('active');
-        console.log(projectCards);
         let tag = btn.getAttribute('data-filter-value');
         projectCards.map(project => {
             if(!project.getAttribute('data-tags').includes(tag)) {
@@ -71,3 +154,6 @@ toggleBtn.addEventListener('click', () => {
     toggleBtn.classList.toggle('active');
     linkContainer.classList.toggle('active');
 });
+
+
+

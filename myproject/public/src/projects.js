@@ -41,7 +41,7 @@ let projects = [
 let projectGallery = document.querySelector('.projectGallery');
 
 const createProjects = (data) => {
-    console.log(JSON.stringify(data));
+    //console.log(JSON.stringify(data));
     projectGallery.innerHTML += `
     <a href="#projectInfo" class="projectCard" data-tags="${data.tags}" data-info='${JSON.stringify(data)}'>
         <img src="${data.imageGallery}" class="projectImg" alt="">

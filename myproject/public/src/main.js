@@ -7,7 +7,7 @@ import {GLTFLoader} from '../../node_modules/three/examples/jsm/loaders/GLTFLoad
 import {OrbitControls} from '../../node_modules/three/examples/jsm/controls/OrbitControls'
 
 
-console.log("this si playing");
+//console.log("this si playing");
 
 
 // first section
