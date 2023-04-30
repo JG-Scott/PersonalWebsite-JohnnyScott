@@ -26,7 +26,7 @@ nav{
   top:0;
   width: 100%;
   height: 100px;
-  padding: 20px 10vw;
+  padding: 20px 5vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -36,6 +36,10 @@ nav{
 
 nav.bg {
   background-color: #000000;
+}
+
+.toggleBtn{
+  display: none;
 }
 
 .logo{
@@ -170,6 +174,9 @@ section{
   text-decoration: none;
   text-transform: capitalize;
   display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
   margin: auto;
 }
 
@@ -287,6 +294,11 @@ section{
 }
 
 
+  .video{
+    width: 672px;
+    height: 378px;
+  }
+
 
 
 
@@ -304,6 +316,7 @@ section{
 }
 
 .aboutImg{
+  object-fit: cover;
   width: 100%;
   height: 100%;
 }
@@ -363,4 +376,299 @@ section{
 .listItem p{
   margin: 0;
   font-size: 1.1rem;
+}
+
+/* contact section */
+
+.contactContainer {
+  margin-top: 100px;
+  display: flex;
+  gap: 50px;
+}
+
+.contactDetails{
+  width: 25%;
+  color: #fff;
+}
+
+.contactCard{
+  position: relative;
+  padding-top: 10px;
+  padding-left: 60px;
+  margin-bottom: 40px;
+}
+
+.cardTitle{
+  text-transform: capitalize;
+  opacity: 0.5;
+}
+
+/* .contactContainer .socialLinksContainer{
+  width: fit-content;
+  display: block;
+  margin: auto;
+
+} */
+
+/* .contactContainer .socialLinks{
+  font-size: 1.4rem;
+  margin right: 10px;
+} */
+
+.contactForm{
+  width: 75%;
+}
+
+input, textarea{
+  font-family: 'inter', sans-serif;
+  width: 100%;
+  padding: 20px;
+  background-color: #1a1a1a;
+  color: #fff;
+  border: none;
+  outline: none;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+
+.nameEmailInput{
+  display: flex;
+  gap: 20px;
+}
+
+textarea{
+  font-family: 'inter', sans-serif;
+  resize: none;
+  height: 300px;
+}
+
+.contactForm .btn {
+  margin: 0;
+  border: none;
+  font-size: 1rem;
+}
+
+
+/* media querys */
+
+
+@media screen and (max-width: 1200px){
+
+  html{
+    font-size: 15px;
+  }
+
+  /* projectGallery */
+  .projectGallery{
+    grid-template-columns: repeat(5,1fr);
+
+  }
+
+  .projectCard{
+    height: 175px;
+  }
+  .video{
+    width: 560px;
+    height: 315px;
+  }
+
+  /* contact section  */
+  .contactContainer{
+    position: relative;
+    flex-direction: column;
+    padding-bottom: 70px;
+  }
+
+  .contactDetails{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+  }
+
+  .contactForm{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 992px){
+  /* hero section  */
+
+  .topHeadline{
+    font-size: 3.5rem;
+  }
+
+  .logo{
+    height: 40px;
+  }
+/* 
+  filters */
+
+  .filterBtn{
+    padding: 10px 15px;
+  }
+
+  /* project Gallery */
+  
+  .projectGallery{
+    grid-template-columns: repeat(4,1fr);
+  }
+
+  .projectCard{
+    height: 150px;
+  }
+
+  .projectDetails{
+
+  }
+
+  .aboutMeContainer{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .aboutMeImageContainer{
+    
+    width: 100%;
+    min-width: 300px;
+    height: 500px;
+    
+  }
+  .aboutImg{
+    object-fit: contain;
+  }
+
+  .personalInfo{
+    width: 100%;
+  }
+
+  .contactContainer{
+    flex-direction: column-reverse;
+  }
+
+  .contactDetails{
+    grid-template-columns: repeat(2,1fr);
+  }
+
+}
+
+@media screen and (max-width: 735px){
+  nav{
+    background-color: #000000;
+
+  }
+  .logo{
+    height: 30px;
+  }
+  .toggleBtn{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 2px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .toggleBtn span {
+    position: absolute;
+    width: 80%;
+    height: 2px;
+    background: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.5s;
+  }
+
+  .toggleBtn span:nth-child(1){
+    top: 30%;
+  }
+
+  .toggleBtn span:nth-child(3){
+    top: 70%;
+  }
+
+  .toggleBtn.active span:nth-child(1){
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  .toggleBtn.active span:nth-child(3){
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  .toggleBtn.active span:nth-child(2){
+    opacity: 0;
+  }
+
+
+  .links-container{
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    top: 100px;
+    left: 0;
+    gap: 0;
+    pointer-events: none;
+    opacity: 0;
+    transition: 0.5s;
+  }
+
+  .links-container.active{
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .links {
+    display: block;
+    width: 100%;
+    padding: 20px 10vw;
+    background: #000000;
+  }
+
+  .links:hover{
+    opacity: 1;
+    background: #1a1a1a;
+  }
+
+
+  
+  
+  .projectGallery{
+    grid-template-columns: repeat(2,1fr);
+  }
+
+
+  .contactDetails{
+    grid-template-columns: repeat(1,1fr);
+  }
+  
+  
+
+  
+}
+
+@media screen and (max-width: 500px){
+  .topHeadline{
+    font-size: 3rem;
+  }
+
+  .topSecondary{
+    font-size: 1.2rem;
+    width: 80%;
+    display: block;
+    margin: 25px auto;
+    line-height: 2rem;
+  }
+
+  .nameEmailInput{
+    flex-direction: column;
+
+  }
+
+  input:nth-child(1) {
+    margin-bottom: 0;
+  }
+  
 }

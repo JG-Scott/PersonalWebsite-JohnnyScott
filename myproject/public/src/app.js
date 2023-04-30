@@ -63,3 +63,11 @@ window.addEventListener('scroll', () => {
         navbar.classList.remove('bg');
     }
 })
+
+const toggleBtn = document.querySelector('.toggleBtn');
+const linkContainer = document.querySelector('.links-container');
+
+toggleBtn.addEventListener('click', () => {
+    toggleBtn.classList.toggle('active');
+    linkContainer.classList.toggle('active');
+});

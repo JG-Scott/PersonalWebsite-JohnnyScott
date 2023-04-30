@@ -10,7 +10,20 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
       rel="stylesheet"
     />
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/solid.min.css"
+      integrity="sha512-yDUXOUWwbHH4ggxueDnC5vJv4tmfySpVdIcN1LksGZi8W8EVZv4uKGrQc0pVf66zS7LDhFJM7Zdeow1sw1/8Jw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="/styles/style.css" />
     <title>Johnny Scott</title>
   </head>
@@ -29,8 +42,16 @@
           <li class="link-items">
             <a href="#aboutmeSection" class="links">About</a>
           </li>
-          <li class="link-items"><a href="#" class="links">Contact</a></li>
+          <li class="link-items">
+            <a href="#contactSection" class="links">Contact</a>
+          </li>
         </ul>
+
+        <div class="toggleBtn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </nav>
     </header>
 
@@ -71,8 +92,6 @@
         <div class="videoSection">
           <iframe
             class="video"
-            width="672"
-            height="378"
             src="https://www.youtube.com/embed/urQ51v-mU5M?start=850"
             title="YouTube video player"
             frameborder="0"
@@ -151,6 +170,47 @@
               </ul>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- contact section  -->
+
+    <section id="contactSection">
+      <h1 class="sectionTitle">Contact</h1>
+      <p class="sectionSecondary">
+        If you'd like to reach out, fill out this form with any questions you
+        have and I'll respond as soon as I can!
+      </p>
+      <div class="contactContainer">
+        <div class="contactDetails">
+          <div class="contactCard">
+            <i class="fa-solid fa-location-dot cardIcon"></i>
+            <span class="cardTitle">Address</span>
+            <p class="cardInfo">19695 70th Ave, Langley, BC, Canada</p>
+          </div>
+          <div class="contactCard">
+            <i class="fa-solid fa-envelope"></i>
+            <span class="cardTitle">Email</span>
+            <p class="cardInfo">johnny@scottmail.ca</p>
+          </div>
+          <div class="contactCard">
+            <i class="fa-solid fa-phone cardIcon"></i>
+            <span class="cardTitle">Phone Number</span>
+            <p class="cardInfo">(778)-551-1321</p>
+          </div>
+        </div>
+
+        <div class="contactForm">
+          <form action="">
+            <div class="nameEmailInput">
+              <input type="text" placeholder="Name" required />
+              <input type="text" placeholder="Email" required />
+            </div>
+            <input type="text" placeholder="Subject" required />
+            <textarea placeholder="Message"></textarea>
+            <button class="btn light" type="submit">Send Message</button>
+          </form>
         </div>
       </div>
     </section>
