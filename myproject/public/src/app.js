@@ -220,8 +220,14 @@ projectCards.map((project, i) => {
 }); 
 
 const setUpInfo = (data) => {
+
         projectName.innerHTML = data.name;
-        projectImage.src = data.imageSingular;
+        if(screen.width <= 992) {
+            projectImage.src = data.imageGallery;
+
+        } else {
+            projectImage.src = data.imageSingular;
+        }
         projectDetails.innerHTML = data.description;
         projectVideo.src = data.video;
         projectVideo.srcdoc=`<style>
