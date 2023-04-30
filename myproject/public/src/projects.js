@@ -7,7 +7,7 @@ let projects = [
         video: 'https://www.youtube.com/embed/PJ9JRmcD2h0',
         videoCode: 'PJ9JRmcD2h0',
         github: 'https://github.com/JG-Scott',
-        imageGallery: '/static/squaredyCat.png',
+        imageGallery: '/static/squaredyCat2.png',
         imageSingular: '/static/squaredyCat.png'
     },
     {
@@ -18,7 +18,7 @@ let projects = [
         videoCode: 'PJ9JRmcD2h0',
         github: 'https://github.com/JG-Scott',
         imageGallery: '/static/seraph.jpeg',
-        imageSingular: '/static/seraph.jpeg'
+        imageSingular: '/static/seraph2.jpeg'
     },   
     {
         name: 'Mini Miner Men',
@@ -38,7 +38,7 @@ let projects = [
         videoCode: 'vOmTriRKQSk',
         github: 'https://github.com/JG-Scott',
         imageGallery: '/static/reflectorknight.png',
-        imageSingular: '/static/reflectorknight.png'
+        imageSingular: '/static/reflectorknight2.png'
     }
 ];
 
