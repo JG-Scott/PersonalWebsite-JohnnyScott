@@ -31,6 +31,12 @@ const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableZoom = false;
 controls.maxPolarAngle = 1.8;
 controls.minPolarAngle = 1.3;
+controls.enablePan = false;
+
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+  controls.enableRotate = false;
+}
+console.log(window.navigator.userAgent);
 //controls.maxAzimuthAngle = .5;
 //controls.minAzimuthAngle = -.5;
 
@@ -49,7 +55,7 @@ const loader = new GLTFLoader();
 
 //room
 var room = new THREE.Object3D();
-loader.load('/static/Models/websiteRoomClosed.gltf', (model) => {
+loader.load('/static/Models/websiteRoom.gltf', (model) => {
   room = model.scene;
   room.traverse( function ( child ) {
             if ( child.isMesh ) {
@@ -90,6 +96,17 @@ scene.add( spotLight.target );
 //scene.add( lightHelper );
 
 scene.add(ambientLight, spotLight);
+
+var spotlight2 = new THREE.SpotLight(0xfffffff, 2.5);
+spotlight2.position.set(0,2,-1);
+spotlight2.distance = 5;
+spotlight2.target.position.set(0,100,0);
+
+
+
+// var lightHelper = new THREE.SpotLightHelper( spotlight2 );
+scene.add( spotlight2);
+scene.add(spotlight2.target);
 
 camera.position.set(0,0,6);
 

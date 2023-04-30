@@ -309,6 +309,8 @@ section{
 .videoSection{
   padding-top: 50px;
   width: 100%;
+    display: flex;
+  justify-content: center;
 
 }
 

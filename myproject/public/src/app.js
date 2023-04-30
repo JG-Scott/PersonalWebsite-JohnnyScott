@@ -222,7 +222,7 @@ projectCards.map((project, i) => {
 const setUpInfo = (data) => {
 
         projectName.innerHTML = data.name;
-        if(screen.width <= 992) {
+        if(screen.width <= 732) {
             projectImage.src = data.imageGallery;
 
         } else {
@@ -310,5 +310,39 @@ toggleBtn.addEventListener('click', () => {
     toggleBtn.classList.toggle('active');
     linkContainer.classList.toggle('active');
 });
+
+
+
+// send emails 
+const serviceID = "service_2cc3ga1"
+
+const emailTemplate = "template_refrswc"
+
+function sendEmails(){
+  var params = {
+    name: document.getElementById('senderName').value,
+    email: document.getElementById('senderEmail').value,
+    subject: document.getElementById('senderSubject').value,
+    message: document.getElementById('senderMessage').value,
+  }
+
+  if(params.name.trim() == "" || params.email.trim() == "" || params.subject.trim() == "" || params.message.trim() == ""){
+    alert("Please fill out all fields before sending message.");
+  } else {
+  emailjs.send(serviceID,emailTemplate, params).then(
+  res => {
+    document.getElementById('senderName').value = "";
+    document.getElementById('senderSubject').value = "";
+    document.getElementById('senderEmail').value = "";
+    document.getElementById('senderMessage').value = "";
+    console.log(res);
+    alert("Email sent!");
+  }
+).catch((err) => console.log(err));
+  }
+}
+
+
+
 
 
