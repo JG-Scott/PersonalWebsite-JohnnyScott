@@ -27,7 +27,7 @@ let projects = [
         video: 'https://www.youtube.com/embed/_bbnwwJrc1Y',
         videoCode: '_bbnwwJrc1Y',
         github: 'https://github.com/JG-Scott',
-        imageGallery: '/static/miniminermen.png',
+        imageGallery: '/static/miniminermen2.png',
         imageSingular: '/static/miniminermen.png'
     },   
     {
