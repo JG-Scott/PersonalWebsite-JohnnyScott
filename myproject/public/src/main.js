@@ -55,7 +55,7 @@ const loader = new GLTFLoader();
 
 //room
 var room = new THREE.Object3D();
-loader.load('/static/Models/websiteRoom.gltf', (model) => {
+loader.load('/static/Models/websiteRoomClosed.gltf', (model) => {
   room = model.scene;
   room.traverse( function ( child ) {
             if ( child.isMesh ) {
@@ -77,12 +77,12 @@ loader.load('/static/Models/websiteRoom.gltf', (model) => {
   scene.add(room);
 });
 
-const ambientLight = new THREE.AmbientLight(0xffffff, 0.4); 
-var spotLight = new THREE.SpotLight( 0xffffff, .75 );
-spotLight.position.set( 0, 4, 0 );
-spotLight.angle = 1;
-spotLight.penumbra = .5
-spotLight.decay = 1;
+const ambientLight = new THREE.AmbientLight(0xffffff, .3); 
+var spotLight = new THREE.SpotLight( 0xffffff, .7 );
+spotLight.position.set( 0, 3.5, -1 );
+spotLight.angle = (Math.PI/2)*.8;
+spotLight.penumbra = 1;
+spotLight.decay = 0.1;
 spotLight.distance = 2000;
 spotLight.shadow.bias = -0.01;
 spotLight.castShadow = true;
@@ -92,19 +92,22 @@ spotLight.target.position.set(10, -1000, -50);
 scene.add( spotLight.target );
 
 
-//var lightHelper = new THREE.SpotLightHelper( spotLight );
-//scene.add( lightHelper );
+// var lightHelper = new THREE.SpotLightHelper( spotLight );
+// scene.add( lightHelper );
 
 scene.add(ambientLight, spotLight);
 
-var spotlight2 = new THREE.SpotLight(0xfffffff, 2.5);
-spotlight2.position.set(0,2,-1);
-spotlight2.distance = 5;
+var spotlight2 = new THREE.SpotLight(0xfffffff, 0.6);
+spotlight2.position.set(0,-4,-1);
+spotlight2.angle = (Math.PI/2);
+spotlight2.penumbra = 1;
+spotlight2.distance = 2000;
 spotlight2.target.position.set(0,100,0);
 
 
 
-// var lightHelper = new THREE.SpotLightHelper( spotlight2 );
+ var lightHelper = new THREE.SpotLightHelper( spotlight2 );
+ scene.add(lightHelper);
 scene.add( spotlight2);
 scene.add(spotlight2.target);
 
