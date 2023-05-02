@@ -219,6 +219,7 @@ projectCards.map((project, i) => {
     })
 }); 
 
+
 const setUpInfo = (data) => {
 
         projectName.innerHTML = data.name;
@@ -259,7 +260,7 @@ const setUpInfo = (data) => {
             transform: scale(1.2);
           }
         </style>
-        <a  href='https://www.youtube.com/embed/${data.videoCode}?autoplay=1'>
+        <a  href='https://www.youtube.com/embed/${data.videoCode}${data.extra}'>
           <img src='https://img.youtube.com/vi/${data.videoCode}/hqdefault.jpg' alt='${data.name}'>
           <svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24' fill='none' stroke='#ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-play-circle'><circle cx='12' cy='12' r='10'></circle><polygon points='10 8 16 12 10 16 10 8'></polygon></svg>
         </a>`;
@@ -267,6 +268,7 @@ const setUpInfo = (data) => {
         itchBtn.href = data.github;
         gitBtn.href = data.github;
 }
+
 
 
 
