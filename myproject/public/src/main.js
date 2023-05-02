@@ -55,7 +55,7 @@ const loader = new GLTFLoader();
 
 //room
 var room = new THREE.Object3D();
-loader.load('/static/Models/websiteRoom.gltf', (model) => {
+loader.load('/static/Models/websiteRoomClosed.gltf', (model) => {
   room = model.scene;
   room.traverse( function ( child ) {
             if ( child.isMesh ) {
