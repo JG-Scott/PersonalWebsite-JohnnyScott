@@ -265,7 +265,14 @@ const setUpInfo = (data) => {
           <svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24' fill='none' stroke='#ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-play-circle'><circle cx='12' cy='12' r='10'></circle><polygon points='10 8 16 12 10 16 10 8'></polygon></svg>
         </a>`;
         projectVideo.title = data.name;
-        itchBtn.href = data.github;
+        if(data.itchio == '') {
+          console.log('this is runnig');
+          itchBtn.style.display = 'none';
+        } else {
+          itchBtn.style.display = 'block';
+          itchBtn.href = data.itchio;
+        }
+
         gitBtn.href = data.github;
 }
 

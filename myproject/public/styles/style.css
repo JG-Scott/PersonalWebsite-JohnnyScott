@@ -8,7 +8,7 @@
 
 
 html{
-  font-family: 'Inter', sans-serif;
+ font-family: 'JetBrains Mono', monospace;
   font-size: 16px;
   scroll-behavior: smooth;
   scroll-padding-top: 100px;
@@ -194,7 +194,7 @@ section{
   text-decoration: none;
   text-transform: capitalize;
   display: block;
-  font-family: 'Inter', sans-serif;
+  font-family: 'JetBrains Mono', monospace;
   font-size: 1rem;
   font-weight: 700;
   margin: auto;
@@ -625,7 +625,7 @@ section{
 }
 
 input, textarea{
-  font-family: 'inter', sans-serif;
+  font-family: 'JetBrains Mono', monospace;
   width: 100%;
   padding: 20px;
   background-color: #1a1a1a;
@@ -643,7 +643,7 @@ input, textarea{
 }
 
 textarea{
-  font-family: 'inter', sans-serif;
+  font-family: 'JetBrains Mono', monospace;
   resize: none;
   height: 300px;
 }
