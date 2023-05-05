@@ -1,10 +1,52 @@
+let tools = new Object();
+
+tools = {
+    "CSharp": {
+        image: 'Csharp_Logo.png',
+    },
+    "CPlusPlus": {
+        image: 'CLogo.png',
+    },
+    "Blender": {
+        image: 'Blender_logo.png',
+    },
+    "Unity": {
+        image: 'unity-69-logot.png',
+    },
+    "GIMP": {
+        image: 'The_GIMP.png',
+    },
+    "Javascript": {
+        image: 'JavaScript-logo.png',
+    },
+    "Typescript": {
+        image: 'Typescript_logo.png',
+    },
+    "Java": {
+        image: 'java-logo.png',
+    },
+    "React": {
+        image: 'React-icon.png',
+    },
+    "Git": {
+        image: 'git.png',
+    },
+    "Aseprite": {
+        image: 'aseprite.png',
+    },
+    "Audacity": {
+        image: 'Audacity_Logo.png',
+    },
+}
+
+
 
 let width = screen.width;
 const projectInfo = document.querySelector('#projectInfo');
 //change project section when below 992
 if(width >= 992) {
     console.log(width)
-    projectInfo.innerHTML = `<div class="projectDetails">
+    projectInfo.innerHTML = `        <div class="projectDetails">
           <div class="imageVideo">
             <img src="static/squaredyCat.png" class="image" alt="" />
                        <div style="width: 100%; max-width: 550px">
@@ -73,12 +115,20 @@ if(width >= 992) {
             </div>
           </div>
           <h2 class="name">Project name</h2>
+          <div class="detailArea">
           <p class="details">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
             atque nulla, distinctio neque qui repellat sequi quasi asperiores
             iste. Atque rerum magnam suscipit nam nulla perspiciatis ratione
             vitae. Dicta, cupiditate.
           </p>
+          <div class="skillArea">
+
+          <div class="skillContainer">
+
+        </div>
+        </div>
+          </div>
           <div class="btnGroup">
             <a href="#" target="_blank" class="btn light" id="gitBtn">GitHub</a>
             <a href="#" target="_blank" class="btn transparent" id="itchBtn"
@@ -104,6 +154,9 @@ if(width >= 992) {
               >Itch.io</a
             >
           </div>
+          <div class="skillContainer">
+
+        </div>
           <div class="videoSection">
                         <div style="width: 100%; max-width: 550px">
               <div
@@ -189,8 +242,12 @@ let projectImage = document.querySelector('.projectDetails .image');
 let projectDetails = document.querySelector('.projectDetails .details');
 let projectVideo = document.querySelector(' .video');
 
+
+
 let itchBtn = document.querySelector('#itchBtn');
 let gitBtn = document.querySelector('#gitBtn');
+
+let skillSection = document.querySelector('.skillContainer');
 
 
 console.log(projectName);
@@ -274,6 +331,18 @@ const setUpInfo = (data) => {
         }
 
         gitBtn.href = data.github;
+        toolList = data.toolsUsed;
+        console.log(toolList.split(' '));
+        skillSection.innerHTML="";
+        toolList.split(' ').forEach(element => {
+          skillSection.innerHTML+= `<div class='skillHolder'>
+                                        <p class='nameAppear'>${element}</p>
+                                        <div class="skillCard">
+                                        <img src="/static/${tools[element].image}" class="skillImage" alt="" />
+                                        <p class="skillName ${element}"></p>
+                                      </div>
+                                     </div>`
+        });
 }
 
 
