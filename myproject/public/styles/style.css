@@ -377,6 +377,20 @@ section{
     color: #fff;
 }
 
+.socialLinksContainer{
+  display:flex;
+  justify-content: center;
+  gap: 30px;
+  
+}
+
+.socialLinks{
+  color: #fff;
+  font-size: 3rem;
+
+
+}
+
 .detailArea{
   display: flex;
   flex-direction: column;
