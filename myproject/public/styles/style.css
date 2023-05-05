@@ -886,6 +886,9 @@ textarea{
 
   }
 
+  .time{
+    font-size: 0.8rem;
+  }
 
 
   input:nth-child(1) {
