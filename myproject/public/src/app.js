@@ -1,178 +1,231 @@
+let tools = new Object();
+
+tools = {
+    "CSharp": {
+        image: 'Csharp_Logo.png',
+    },
+    "CPlusPlus": {
+        image: 'CLogo.png',
+    },
+    "Blender": {
+        image: 'Blender_logo.png',
+    },
+    "Unity": {
+        image: 'unity-69-logot.png',
+    },
+    "GIMP": {
+        image: 'The_GIMP.png',
+    },
+    "Javascript": {
+        image: 'JavaScript-logo.png',
+    },
+    "Typescript": {
+        image: 'Typescript_logo.png',
+    },
+    "Java": {
+        image: 'java-logo.png',
+    },
+    "React": {
+        image: 'React-icon.png',
+    },
+    "Git": {
+        image: 'git.png',
+    },
+    "Aseprite": {
+        image: 'aseprite.png',
+    },
+    "Audacity": {
+        image: 'Audacity_Logo.png',
+    },
+}
+
+
 
 let width = screen.width;
 const projectInfo = document.querySelector('#projectInfo');
 //change project section when below 992
-// if(width >= 992) {
-//     console.log(width)
-    // projectInfo.innerHTML = `<div class="projectDetails">
-    //       <div class="imageVideo">
-    //         <img src="static/squaredyCat.png" class="image" alt="" />
-    //                    <div style="width: 100%; max-width: 550px">
-    //           <div
-    //             style="
-    //               position: relative;
-    //               padding-bottom: 56.15%;
-    //               height: 0;
-    //               overflow: hidden;
-    //             "
-    //           >
-    //             <iframe
-    //               style="
-    //                 position: absolute;
-    //                 top: 0;
-    //                 left: 0;
-    //                 width: 100%;
-    //                 height: 100%;
-    //                 border: 0;
-    //               "
-    //               loading="lazy"
-    //               ;
-    //               class="video"
-    //               src=""
-    //               srcdoc="<style>
-    //       * {
-    //       padding: 0;
-    //       margin: 0;
-    //       overflow: hidden;
-    //       }
+if(width >= 992) {
+    console.log(width)
+    projectInfo.innerHTML = `        <div class="projectDetails">
+          <div class="imageVideo">
+            <img src="static/squaredyCat.png" class="image" alt="" />
+                       <div style="width: 100%; max-width: 550px">
+              <div
+                style="
+                  position: relative;
+                  padding-bottom: 56.15%;
+                  height: 0;
+                  overflow: hidden;
+                "
+              >
+                <iframe
+                  style="
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    border: 0;
+                  "
+                  loading="lazy"
+                  ;
+                  class="video"
+                  src=""
+                  srcdoc="<style>
+          * {
+          padding: 0;
+          margin: 0;
+          overflow: hidden;
+          }
           
-    //       body, html {
-    //         height: 100%;
-    //       }
+          body, html {
+            height: 100%;
+          }
           
-    //       img, svg {
-    //         position: absolute;
-    //         width: 100%;
-    //         top: 0;
-    //         bottom: 0;
-    //         margin: auto;
-    //       }
+          img, svg {
+            position: absolute;
+            width: 100%;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+          }
           
-    //       svg {
-    //         filter: drop-shadow(1px 1px 10px hsl(206.5, 70.7%, 8%));
-    //         transition: all 250ms ease-in-out;
-    //       }
+          svg {
+            filter: drop-shadow(1px 1px 10px hsl(206.5, 70.7%, 8%));
+            transition: all 250ms ease-in-out;
+          }
           
-    //       body:hover svg {
-    //         filter: drop-shadow(1px 1px 10px hsl(206.5, 0%, 10%));
-    //         transform: scale(1.2);
-    //       }
-    //     </style>
-    //     <a  href=''>
-    //       <img src='https://img.youtube.com/vi/PJ9JRmcD2h0/hqdefault.jpg' alt='Coffee Recipe Javascript Project'>
-    //       <svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24' fill='none' stroke='#ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-play-circle'><circle cx='12' cy='12' r='10'></circle><polygon points='10 8 16 12 10 16 10 8'></polygon></svg>
-    //     </a>
-    //     "
-    //               title="Coffee Recipe Javascript Project"
-    //               frameborder="0"
-    //               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    //               allowfullscreen
-    //             >
-    //             </iframe>
-    //           </div>
-    //         </div>
-    //       </div>
-    //       <h2 class="name">Project name</h2>
-    //       <p class="details">
-    //         Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
-    //         atque nulla, distinctio neque qui repellat sequi quasi asperiores
-    //         iste. Atque rerum magnam suscipit nam nulla perspiciatis ratione
-    //         vitae. Dicta, cupiditate.
-    //       </p>
-    //       <div class="btnGroup">
-    //         <a href="#" target="_blank" class="btn light" id="gitBtn">GitHub</a>
-    //         <a href="#" target="_blank" class="btn transparent" id="itchBtn"
-    //           >Itch.io</a
-    //         >
-    //       </div>
-    //     </div>`
-// } else {
-//     projectInfo.innerHTML=`        <div class="projectDetails">
-//           <div class="imageDescription">
-//             <img src="static/squaredyCat.png" class="image" alt="" />
-//             <h2 class="name">Project name</h2>
-//             <p class="details">
-//               Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
-//               atque nulla, distinctio neque qui repellat sequi quasi asperiores
-//               iste. Atque rerum magnam suscipit nam nulla perspiciatis ratione
-//               vitae. Dicta, cupiditate.
-//             </p>
-//           </div>
-//           <div class="btnGroup">
-//             <a href="#" target="_blank" class="btn light" id="gitBtn">GitHub</a>
-//             <a href="#" target="_blank" class="btn transparent" id="itchBtn"
-//               >Itch.io</a
-//             >
-//           </div>
-//           <div class="videoSection">
-//                         <div style="width: 100%; max-width: 550px">
-//               <div
-//                 style="
-//                   position: relative;
-//                   padding-bottom: 56.15%;
-//                   height: 0;
-//                   overflow: hidden;
-//                 "
-//               >
-//                 <iframe
-//                   style="
-//                     position: absolute;
-//                     top: 0;
-//                     left: 0;
-//                     width: 100%;
-//                     height: 100%;
-//                     border: 0;
-//                   "
-//                   loading="lazy"
-//                   ;
-//                   class="video"
-//                   src=""
-//                   srcdoc="<style>
-//           * {
-//           padding: 0;
-//           margin: 0;
-//           overflow: hidden;
-//           }
+          body:hover svg {
+            filter: drop-shadow(1px 1px 10px hsl(206.5, 0%, 10%));
+            transform: scale(1.2);
+          }
+        </style>
+        <a  href=''>
+          <img src='https://img.youtube.com/vi/PJ9JRmcD2h0/hqdefault.jpg' alt='Coffee Recipe Javascript Project'>
+          <svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24' fill='none' stroke='#ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-play-circle'><circle cx='12' cy='12' r='10'></circle><polygon points='10 8 16 12 10 16 10 8'></polygon></svg>
+        </a>
+        "
+                  title="Coffee Recipe Javascript Project"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                >
+                </iframe>
+              </div>
+            </div>
+          </div>
+          <h2 class="name">Project name</h2>
+          <div class="detailArea">
+          <p class="details">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
+            atque nulla, distinctio neque qui repellat sequi quasi asperiores
+            iste. Atque rerum magnam suscipit nam nulla perspiciatis ratione
+            vitae. Dicta, cupiditate.
+          </p>
+          <div class="skillArea">
+
+          <div class="skillContainer">
+
+        </div>
+        </div>
+          </div>
+          <div class="btnGroup">
+            <a href="#" target="_blank" class="btn light" id="gitBtn">GitHub</a>
+            <a href="#" target="_blank" class="btn transparent" id="itchBtn"
+              >Itch.io</a
+            >
+          </div>
+        </div>`
+} else {
+    projectInfo.innerHTML=`        <div class="projectDetails">
+          <div class="imageDescription">
+            <img src="static/squaredyCat.png" class="image" alt="" />
+            <h2 class="name">Project name</h2>
+            <p class="details">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
+              atque nulla, distinctio neque qui repellat sequi quasi asperiores
+              iste. Atque rerum magnam suscipit nam nulla perspiciatis ratione
+              vitae. Dicta, cupiditate.
+            </p>
+          </div>
+          <div class="btnGroup">
+            <a href="#" target="_blank" class="btn light" id="gitBtn">GitHub</a>
+            <a href="#" target="_blank" class="btn transparent" id="itchBtn"
+              >Itch.io</a
+            >
+          </div>
+          <div class="skillContainer">
+
+        </div>
+          <div class="videoSection">
+                        <div style="width: 100%; max-width: 550px">
+              <div
+                style="
+                  position: relative;
+                  padding-bottom: 56.15%;
+                  height: 0;
+                  overflow: hidden;
+                "
+              >
+                <iframe
+                  style="
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    border: 0;
+                  "
+                  loading="lazy"
+                  ;
+                  class="video"
+                  src=""
+                  srcdoc="<style>
+          * {
+          padding: 0;
+          margin: 0;
+          overflow: hidden;
+          }
           
-//           body, html {
-//             height: 100%;
-//           }
+          body, html {
+            height: 100%;
+          }
           
-//           img, svg {
-//             position: absolute;
-//             width: 100%;
-//             top: 0;
-//             bottom: 0;
-//             margin: auto;
-//           }
+          img, svg {
+            position: absolute;
+            width: 100%;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+          }
           
-//           svg {
-//             filter: drop-shadow(1px 1px 10px hsl(206.5, 70.7%, 8%));
-//             transition: all 250ms ease-in-out;
-//           }
+          svg {
+            filter: drop-shadow(1px 1px 10px hsl(206.5, 70.7%, 8%));
+            transition: all 250ms ease-in-out;
+          }
           
-//           body:hover svg {
-//             filter: drop-shadow(1px 1px 10px hsl(206.5, 0%, 10%));
-//             transform: scale(1.2);
-//           }
-//         </style>
-//         <a  href=''>
-//           <img src='https://img.youtube.com/vi/PJ9JRmcD2h0/hqdefault.jpg' alt='Coffee Recipe Javascript Project'>
-//           <svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24' fill='none' stroke='#ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-play-circle'><circle cx='12' cy='12' r='10'></circle><polygon points='10 8 16 12 10 16 10 8'></polygon></svg>
-//         </a>
-//         "
-//                   title="Coffee Recipe Javascript Project"
-//                   frameborder="0"
-//                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-//                   allowfullscreen
-//                 >
-//                 </iframe>
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//       </div>`;
-// }
+          body:hover svg {
+            filter: drop-shadow(1px 1px 10px hsl(206.5, 0%, 10%));
+            transform: scale(1.2);
+          }
+        </style>
+        <a  href=''>
+          <img src='https://img.youtube.com/vi/PJ9JRmcD2h0/hqdefault.jpg' alt='Coffee Recipe Javascript Project'>
+          <svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24' fill='none' stroke='#ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-play-circle'><circle cx='12' cy='12' r='10'></circle><polygon points='10 8 16 12 10 16 10 8'></polygon></svg>
+        </a>
+        "
+                  title="Coffee Recipe Javascript Project"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                >
+                </iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>`;
+}
 
 
 
@@ -189,8 +242,12 @@ let projectImage = document.querySelector('.projectDetails .image');
 let projectDetails = document.querySelector('.projectDetails .details');
 let projectVideo = document.querySelector(' .video');
 
+
+
 let itchBtn = document.querySelector('#itchBtn');
 let gitBtn = document.querySelector('#gitBtn');
+
+let skillSection = document.querySelector('.skillContainer');
 
 
 console.log(projectName);
@@ -266,6 +323,18 @@ const setUpInfo = (data) => {
         projectVideo.title = data.name;
         itchBtn.href = data.github;
         gitBtn.href = data.github;
+        toolList = data.toolsUsed;
+        console.log(toolList.split(' '));
+        skillSection.innerHTML="";
+        toolList.split(' ').forEach(element => {
+          skillSection.innerHTML+= `<div class='skillHolder'>
+                                        <p class='nameAppear'>${element}</p>
+                                        <div class="skillCard">
+                                        <img src="/static/${tools[element].image}" class="skillImage" alt="" />
+                                        <p class="skillName ${element}"></p>
+                                      </div>
+                                     </div>`
+        });
 }
 
 
