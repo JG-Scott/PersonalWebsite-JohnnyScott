@@ -373,13 +373,27 @@ section{
 }
 
 .detailArea{
-  display: grid;
+  display: flex;
   position: relative;
-  grid-template-columns: (2,1fr);
   gap: 20px;
 }
+
+.skillArea{
+  width: 50%;
+
+}
+
+.subTitle{
+  color: #fff;
+  margin: 30px 0;
+  font-weight: 300;
+  font-size: 2rem;
+  text-transform: capitalize;
+  text-align: left;
+}
+
 .details{
-  
+  width: 50%;
 }
 
 
