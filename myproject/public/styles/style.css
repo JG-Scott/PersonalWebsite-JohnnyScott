@@ -313,7 +313,7 @@ section{
   opacity: 0.5;
   font-size: 1.1rem;
   line-height: 1.8rem;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   text-align: left;
 }
 
@@ -484,7 +484,7 @@ section{
 .skillContainer{
   display: flex;
   flex-wrap: wrap;
-  gap: 25px;
+  gap: 0px;
 }
 
 .skillCard{
@@ -492,6 +492,7 @@ section{
   height: 90px;
   background: #1a1a1a;
   padding: 10px;
+  margin: auto;
   position: relative;
   overflow: hidden;
   transition: 0.5s;
@@ -590,7 +591,10 @@ section{
   opacity: 0;
   transition: 0.5s;
 }
-
+.skillHolder {
+  padding-top: 10px;
+  width: 100px;
+}
 .skillHolder:hover .skillImage{
   transform: scale(1.1) translateY(-5px);
 
