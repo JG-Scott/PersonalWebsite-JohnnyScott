@@ -358,18 +358,17 @@ section{
 
 .aboutImg{
   object-fit: cover;
-  width: 100%;
+  max-width: 300px;
   height: 100%;
 }
 
 .download-btn{
-  position: absolute;
+
   text-align: center;
   bottom: 30px;
   left: 50%;
   font-weight: 700;
   font-size: 1.0rem;
-  transform: translateX(-50%);
 }
 
 .personalInfo{
