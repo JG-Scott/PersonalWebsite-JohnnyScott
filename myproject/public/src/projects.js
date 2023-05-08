@@ -72,7 +72,7 @@ let projects = [
         toolsUsed: 'Blender',
         filter: 'art',
         imageGallery: '/static/bathroom.png',
-        imageSingular: '/static/bathroom.png'
+        imageSingular: '/static/bathroom.png',
     },
     {
         name: 'Camping Trip',

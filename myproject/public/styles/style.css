@@ -354,8 +354,28 @@ section{
   align-content: center;
 }
 .artImage{
-  width: auto;
   height: 600px;
+  max-width: 70%;
+}
+
+.mirrorMan{
+  height: 600px;
+  max-width: 70%;
+}
+
+.christmas{
+  width: 40%;
+  height: auto;
+}
+
+.camping{
+  height: auto;
+  max-width: 70%;
+}
+
+.potBoys{
+  height: auto;
+  max-width: 70%;
 }
 
 .artImage:hover {
@@ -386,8 +406,40 @@ section{
   display: block;
   object-fit: contain;
   width: 60%;
-  max-width: 700px;
+  max-width: 600px;
 }
+
+.mirrorManModal{
+  margin: auto;
+  display: block;
+  object-fit: contain;
+  width: auto;
+  height: 850px;
+}
+
+.christmasModal{
+  margin: auto;
+  display: block;
+  object-fit: contain;
+  width: 40%;
+}
+
+.campingModal{
+  margin: auto;
+  display: block;
+  object-fit: contain;
+  width: 80%;
+}
+
+.potBoysModal{
+  margin: auto;
+  display: block;
+  object-fit: contain;
+  width: 80%;
+
+}
+
+
 
 /* Caption of Modal Image (Image Text) - Same Width as the Image */
 #caption {

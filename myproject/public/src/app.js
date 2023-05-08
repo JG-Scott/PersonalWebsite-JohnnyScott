@@ -131,33 +131,70 @@ const handleProjectSection = (data) => {
 } 
 
 const handleArtSection = (data) => {
-  
   projectInfo.innerHTML = artSection;
   grabHTML();
   artImage.src = data.imageGallery;
   projectName.innerHTML = data.name;
   projectDetails.innerHTML = data.description;
   // Get the modal
-var modal = document.getElementById("myModal");
+  var modal = document.getElementById("myModal");
 
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-var img = document.querySelector(".artImage");
-var modalImg = document.getElementById("img01");
-var captionText = document.getElementById("caption");
-img.onclick = function(){
-  modal.style.display = "block";
-  modalImg.src = this.src;
-  captionText.innerHTML = this.alt;
-}
+  // Get the image and insert it inside the modal - use its "alt" text as a caption
+  var img = document.querySelector(".artImage");
+  var modalImg = document.getElementById("img01");
+  var captionText = document.getElementById("caption");
+  img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+    console.log("before");
+    document.getElementById("viewport").setAttribute("content", "user-scalable=yes, initial-scale=1, maximum-scale=2, minimum-scale=0.5, width=device-width, height=device-height, target-densitydpi=device-dpi")
+    console.log('after')
+    console.log(document.getElementById('viewport'))
+  }
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+    document.getElementById("viewport").setAttribute("content", "width=device-width, initial-scale=1.0 maximum-scale=1")
+  }
 
+  switch (data.name) {
+    case 'Mirror Man':
+      img.classList.remove("artImage");
+      img.classList.add('mirrorMan');
+      modalImg.classList.remove("modal-content");
+      modalImg.classList.add('mirrorManModal');
+      break;
+  
+    case 'Christmas Day':
+      artImage.classList.remove("artImage");
+      artImage.classList.add('christmas');
+      modalImg.classList.remove("modal-content");
+      modalImg.classList.add('christmasModal');
+      break;
+
+    case 'Camping Trip':
+      artImage.classList.remove("artImage");
+      artImage.classList.add('camping');
+      modalImg.classList.remove("modal-content");
+      modalImg.classList.add('campingModal');
+      break;
+
+    case 'Pot Boys':
+      artImage.classList.remove("artImage");
+      artImage.classList.add('potBoys');
+      modalImg.classList.remove("modal-content");
+      modalImg.classList.add('potBoysModal');
+      break;
+
+    default:
+
+      break;
+  }
 
 }
 
