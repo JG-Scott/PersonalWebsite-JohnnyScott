@@ -74,7 +74,24 @@ let projects = [
         imageGallery: '/static/bathroom.png',
         imageSingular: '/static/bathroom.png'
     },
-
+    {
+        name: 'Camping Trip',
+        description: 'Created Using Blender, December 23, 2020.',
+        tags: 'Blender',
+        toolsUsed: 'Blender',
+        filter: 'art',
+        imageGallery: '/static/worm2.png',
+        imageSingular: '/static/worm2.png'
+    },
+    {
+        name: 'Pot Boys',
+        description: 'Created Using Blender, December 23, 2020.',
+        tags: 'Blender',
+        toolsUsed: 'Blender',
+        filter: 'art',
+        imageGallery: '/static/potboys.png',
+        imageSingular: '/static/potboys.png'
+    },
 ];
 
 
