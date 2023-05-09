@@ -147,10 +147,7 @@ const handleArtSection = (data) => {
     modal.style.display = "block";
     modalImg.src = this.src;
     captionText.innerHTML = this.alt;
-    console.log("before");
-    document.getElementById("viewport").setAttribute("content", "user-scalable=yes, initial-scale=1, maximum-scale=2, minimum-scale=0.5, width=device-width, height=device-height, target-densitydpi=device-dpi")
-    console.log('after')
-    console.log(document.getElementById('viewport'))
+    
   }
 
   // Get the <span> element that closes the modal
@@ -159,7 +156,6 @@ const handleArtSection = (data) => {
   // When the user clicks on <span> (x), close the modal
   span.onclick = function() {
     modal.style.display = "none";
-    document.getElementById("viewport").setAttribute("content", "width=device-width, initial-scale=1.0 maximum-scale=1")
   }
 
   switch (data.name) {
