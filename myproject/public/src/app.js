@@ -51,6 +51,9 @@ const setUpInfo = (data) => {
     handleProjectSection(data);
   } else if(data.filter == 'art') {
     handleArtSection(data);
+  } else if(data.filter == 'app') {
+    console.log(data);
+    handleApplicationSection(data);
   }
       
 }
@@ -120,8 +123,9 @@ const handleProjectSection = (data) => {
         console.log(toolList.split(' '));
         skillSection.innerHTML="";
         toolList.split(' ').forEach(element => {
+          let name =tools[element].otherName == '' ? element : tools[element].otherName;
           skillSection.innerHTML+= `<div class='skillHolder'>
-                                        <p class='nameAppear'>${element}</p>
+                                        <p class='nameAppear'>${name}</p>
                                         <div class="skillCard">
                                         <img src="/static/${tools[element].image}" class="skillImage" alt="" />
                                         <p class="skillName ${element}"></p>
@@ -136,6 +140,8 @@ const handleArtSection = (data) => {
   artImage.src = data.imageGallery;
   projectName.innerHTML = data.name;
   projectDetails.innerHTML = data.description;
+  
+  if( !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
   // Get the modal
   var modal = document.getElementById("myModal");
 
@@ -157,7 +163,8 @@ const handleArtSection = (data) => {
   span.onclick = function() {
     modal.style.display = "none";
   }
-
+  }
+  
   switch (data.name) {
     case 'Mirror Man':
       img.classList.remove("artImage");
@@ -194,8 +201,76 @@ const handleArtSection = (data) => {
 
 }
 
+const handleApplicationSection = (data) => {
+        projectInfo.innerHTML = applicationSection;
+        grabHTML();
+        projectName.innerHTML = data.name;
+        projectDetails.innerHTML = data.description;
+        if(data.representer == 'video') {
+            projectVideo.src = data.video;
+            projectVideo.srcdoc=`<style>
+              * {
+              padding: 0;
+              margin: 0;
+              overflow: hidden;
+              }
+              
+              body, html {
+                height: 100%;
+              }
+              
+              img, svg {
+                position: absolute;
+                width: 100%;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+              }
+              
+              svg {
+                filter: drop-shadow(1px 1px 10px hsl(206.5, 70.7%, 8%));
+                transition: all 250ms ease-in-out;
+              }
+              
+              body:hover svg {
+                filter: drop-shadow(1px 1px 10px hsl(206.5, 0%, 10%));
+                transform: scale(1.2);
+              }
+            </style>
+            <a  href='https://www.youtube.com/embed/${data.videoCode}${data.extra}'>
+              <img src='https://img.youtube.com/vi/${data.videoCode}/hqdefault.jpg' alt='${data.name}'>
+              <svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24' fill='none' stroke='#ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-play-circle'><circle cx='12' cy='12' r='10'></circle><polygon points='10 8 16 12 10 16 10 8'></polygon></svg>
+            </a>`;
+            projectVideo.title = data.name;
+        } else if(data.representer == 'image') {
+          document.querySelector('.applicationImageVideo').innerHTML = `<img src="${data.imageGallery}" class="image" alt="" />`
 
+        }
+     
+        if(data.itchio == '') {
+          console.log('this is runnig');
+          itchBtn.style.display = 'none';
+        } else {
+          itchBtn.style.display = 'block';
+          itchBtn.href = data.itchio;
+        }
 
+        gitBtn.href = data.github;
+        toolList = data.toolsUsed;
+        console.log(toolList.split(' '));
+        skillSection.innerHTML="";
+        toolList.split(' ').forEach(element => {
+          let name =tools[element].otherName == '' ? element : tools[element].otherName;
+          skillSection.innerHTML+= `<div class='skillHolder'>
+                                        <p class='nameAppear'>${name}</p>
+                                        <div class="skillCard">
+                                        <img src="/static/${tools[element].image}" class="skillImage" alt="" />
+                                        <p class="skillName ${element}"></p>
+                                      </div>
+                                     </div>`
+        });
+}
+ 
 
 
 const filters = [... document.querySelectorAll('.filterBtn')];

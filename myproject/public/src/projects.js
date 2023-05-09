@@ -1,6 +1,6 @@
 //https://www.youtube.com/embed/urQ51v-mU5M?start=850
 let projects = [
-    {
+    {// GAMES///////////////////////////////////////////////////////////////////
         name: 'Squaredy Cat',
         description: 'Squaredy Cat is a short horror game made over the course of 3 days for the Mini Jam 127 game jam hosted on Itch.io. The theme for the Game Jam was “Cats<sup>2</sup>” and the limitation was to only use a predetermined color palette. Squaredy Cat ended up coming in 11th out of 121 entries.',
         tags: 'Unity/C#, Blender, Gimp',
@@ -56,7 +56,7 @@ let projects = [
         imageGallery: '/static/reflectorknight.png',
         imageSingular: '/static/reflectorknight2.png'
     },
-            {
+    { // ART///////////////////////////////////////////////////////////////////
         name: 'Christmas Day',
         description: 'Created Using Blender, December 18, 2020.',
         tags: 'Blender',
@@ -92,6 +92,22 @@ let projects = [
         imageGallery: '/static/potboys.png',
         imageSingular: '/static/potboys.png'
     },
+
+    {// APPS///////////////////////////////////////////////////////////////////
+        name: 'Sorting Algorithm Visualizer',
+        description: 'A sorting algorithm visualizer which demonstrates how different algorithms go about sorting large lists of values. The project was made in C++ using the SFML Library',
+        tags: 'C++, SFML',
+        filter: 'app',
+        toolsUsed: 'CPlusPlus SFML',
+        video: 'https://youtu.be/B27Bbe0QPSA',
+        videoCode: 'B27Bbe0QPSA',
+        itchio: '',
+        github: 'https://github.com/JG-Scott/SortingAlgorithmVisualizer',
+        extra: '',
+        imageGallery: '/static/sortingAlgorithmImage.png',
+        representer: 'video'
+    },
+
 ];
 
 
