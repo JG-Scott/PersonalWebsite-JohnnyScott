@@ -45,7 +45,7 @@ let projects = [
     {
         name: 'Reflector Knight',
         description: 'Reflector Knight is an arcade 2D arcade game created over 3 days for the Mini Jam 121 hosted on itch.io. The objective of the game is to survive and score as many points as you can by knocking up and reflecting ground enemies at the enemies above.',
-        tags: 'Unity/C#, Blender, Gimp',
+        tags: 'Unity/C#, Aseprite, Gimp',
         filter: 'game',
         toolsUsed: 'CSharp Unity GIMP Aseprite Audacity',
         video: 'https://www.youtube.com/embed/vOmTriRKQSk',
@@ -55,6 +55,20 @@ let projects = [
         extra: '',
         imageGallery: '/static/reflectorknight.png',
         imageSingular: '/static/reflectorknight2.png'
+    },
+    {
+        name: 'The Knightly Grind',
+        description: 'The Knightly Grind is a 2D action game made for the Trijam game jam hosted by itch.io. The game was made in under 3 hours and was placed first overall in the competition.',
+        tags: 'Unity/C#, Aseprite, Gimp',
+        filter: 'game',
+        toolsUsed: 'CSharp Unity GIMP Aseprite Audacity',
+        video: 'https://www.youtube.com/embed/f10kSj8W2ec',
+        videoCode: 'f10kSj8W2ec',
+        itchio: 'https://tippyjgs.itch.io/the-knightly-grind',
+        github: 'https://github.com/JG-Scott/TheKnightlyGrind',
+        extra: '',
+        imageGallery: '/static/theknightlygrind.png',
+        imageSingular: '/static/theknightlygrindlong.png'
     },
     { // ART///////////////////////////////////////////////////////////////////
         name: 'Christmas Day',
