@@ -1,6 +1,20 @@
 //https://www.youtube.com/embed/urQ51v-mU5M?start=850
-let projects = [
-    {// GAMES///////////////////////////////////////////////////////////////////
+let projects = [// GAMES///////////////////////////////////////////////////////////////////
+    {
+        name: 'One Shot',
+        description: 'One Shot is a first person horror game made for the Scream Jam 2023 game jam hosted on Itch.io. It was ranked 1st in the horror category.',
+        tags: 'Unity/C#, Blender, Gimp',
+        filter: 'game',
+        toolsUsed: 'CSharp Unity Blender GIMP Audacity Git',
+        video: 'https://www.youtube.com/embed/jTckpc5KkCQ?si=UNlJtEom-0TLhLGT',
+        videoCode: 'jTckpc5KkCQ?si=UNlJtEom-0TLhLGT',
+        github: '',
+        itchio: 'https://tippyjgs.itch.io/oneshot',
+        extra: '',
+        imageGallery: '/static/oneshot.png',
+        imageSingular: '/static/oneshot.png'
+    },   
+    {
         name: 'Squaredy Cat',
         description: 'Squaredy Cat is a short horror game made over the course of 3 days for the Mini Jam 127 game jam hosted on Itch.io. The theme for the Game Jam was “Cats<sup>2</sup>” and the limitation was to only use a predetermined color palette. Squaredy Cat ended up coming in 11th out of 121 entries.',
         tags: 'Unity/C#, Blender, Gimp',
