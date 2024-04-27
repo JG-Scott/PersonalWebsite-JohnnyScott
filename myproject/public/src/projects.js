@@ -6,13 +6,13 @@ let projects = [// GAMES////////////////////////////////////////////////////////
         tags: 'Unity/C#, Blender, Gimp',
         filter: 'game',
         toolsUsed: 'CSharp Unity Blender GIMP Audacity Git',
-        video: 'https://www.youtube.com/embed/jTckpc5KkCQ?si=UNlJtEom-0TLhLGT',
-        videoCode: 'jTckpc5KkCQ?si=UNlJtEom-0TLhLGT',
+        video: 'https://www.youtube.com/embed/jTckpc5KkCQ',
+        videoCode: 'jTckpc5KkCQ',
         github: '',
         itchio: 'https://tippyjgs.itch.io/oneshot',
         extra: '',
-        imageGallery: '/static/oneshot.png',
-        imageSingular: '/static/oneshot.png'
+        imageGallery: '/static/oneshot.jpg',
+        imageSingular: '/static/oneshot2.png'
     },   
     {
         name: 'Squaredy Cat',
