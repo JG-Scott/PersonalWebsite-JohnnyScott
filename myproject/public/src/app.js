@@ -118,7 +118,14 @@ const handleProjectSection = (data) => {
           itchBtn.href = data.itchio;
         }
 
-        gitBtn.href = data.github;
+        //gitBtn.href = data.github;
+        if(data.github == '') {
+          console.log('this is runnig');
+          gitBtn.style.display = 'none';
+        } else {
+          gitBtn.style.display = 'block';
+          gitBtn.href = data.itchio;
+        }
         toolList = data.toolsUsed;
         console.log(toolList.split(' '));
         skillSection.innerHTML="";

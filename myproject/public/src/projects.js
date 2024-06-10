@@ -120,8 +120,9 @@ let projects = [// GAMES////////////////////////////////////////////////////////
         imageGallery: '/static/potboys.png',
         imageSingular: '/static/potboys.png'
     },
-
-    {// APPS///////////////////////////////////////////////////////////////////
+    
+    // APPS///////////////////////////////////////////////////////////////////
+    {
         name: 'Sorting Algorithm Visualizer',
         description: 'A sorting algorithm visualizer which demonstrates how different algorithms go about sorting large lists of values. The project was made in C++ using the SFML Library',
         tags: 'C++, SFML',
@@ -131,6 +132,21 @@ let projects = [// GAMES////////////////////////////////////////////////////////
         videoCode: 'B27Bbe0QPSA',
         itchio: '',
         github: 'https://github.com/JG-Scott/SortingAlgorithmVisualizer',
+        extra: '',
+        imageGallery: '/static/sortingAlgorithmImage.png',
+        representer: 'video'
+    },
+    
+    {
+        name: 'Bobo - C++ Game Engine and Pool Simulator',
+        description: 'Bobo is a game engine made entirely from C++. It utilizes OpenGL for rendering, Jolt for physics, and ImGui for UI Handling. A pool simulator game was created in order to show the capabilities of the engine.',
+        tags: 'C++, OpenGL, Jolt, ImGui',
+        filter: 'app',
+        toolsUsed: 'C++, OpenGL, Jolt, ImGui',
+        video: 'Video',
+        videoCode: 'Videocode',
+        itchio: '',
+        github: 'https://github.com/metalpipemomo/bobo',
         extra: '',
         imageGallery: '/static/sortingAlgorithmImage.png',
         representer: 'video'
