@@ -135,22 +135,22 @@ let projects = [// GAMES////////////////////////////////////////////////////////
         extra: '',
         imageGallery: '/static/sortingAlgorithmImage.png',
         representer: 'video'
-    },
+    }
     
-    {
-        name: 'Bobo - C++ Game Engine and Pool Simulator',
-        description: 'Bobo is a game engine made entirely from C++. It utilizes OpenGL for rendering, Jolt for physics, and ImGui for UI Handling. A pool simulator game was created in order to show the capabilities of the engine.',
-        tags: 'C++, OpenGL, Jolt, ImGui',
-        filter: 'app',
-        toolsUsed: 'C++, OpenGL, Jolt, ImGui',
-        video: 'Video',
-        videoCode: 'Videocode',
-        itchio: '',
-        github: 'https://github.com/metalpipemomo/bobo',
-        extra: '',
-        imageGallery: '/static/sortingAlgorithmImage.png',
-        representer: 'video'
-    },
+    // {
+    //     name: 'Bobo - C++ Game Engine and Pool Simulator',
+    //     description: 'Bobo is a game engine made entirely from C++. It utilizes OpenGL for rendering, Jolt for physics, and ImGui for UI Handling. A pool simulator game was created in order to show the capabilities of the engine.',
+    //     tags: 'C++, OpenGL, Jolt, ImGui',
+    //     filter: 'app',
+    //     toolsUsed: 'C++, OpenGL, Jolt, ImGui',
+    //     video: 'Video',
+    //     videoCode: 'Videocode',
+    //     itchio: '',
+    //     github: 'https://github.com/metalpipemomo/bobo',
+    //     extra: '',
+    //     imageGallery: '/static/sortingAlgorithmImage.png',
+    //     representer: 'video'
+    // },
 
 ];
 
