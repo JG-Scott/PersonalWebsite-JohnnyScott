@@ -13,13 +13,6 @@ var artImage;
 
 let width = screen.width;
 const projectInfo = document.querySelector('#projectInfoHolder');
-//change project section when below 992
-// if(width >= 992) {
-//     console.log(width)
-//     projectInfo.innerHTML = largeProjectSection;
-// } else {
-//     projectInfo.innerHTML= smallProjectSection;
-// }
 const grabHTML = () => {
     projectCards = [...document.querySelectorAll('.projectCard')];
     projectName = document.querySelector('.projectDetails .name');
@@ -46,13 +39,11 @@ projectCards.map((project, i) => {
 
 
 const setUpInfo = (data) => {
-  console.log("this is running")
   if(data.filter == 'game') {
     handleProjectSection(data);
   } else if(data.filter == 'art') {
     handleArtSection(data);
   } else if(data.filter == 'app') {
-    console.log(data);
     handleApplicationSection(data);
   }
       
@@ -61,7 +52,6 @@ const setUpInfo = (data) => {
 
 const handleProjectSection = (data) => {
   if(width >= 992) {
-      console.log(width)
       projectInfo.innerHTML = largeProjectSection;
   } else {
       projectInfo.innerHTML= smallProjectSection;
@@ -111,7 +101,7 @@ const handleProjectSection = (data) => {
         </a>`;
         projectVideo.title = data.name;
         if(data.itchio == '') {
-          console.log('this is runnig');
+  
           itchBtn.style.display = 'none';
         } else {
           itchBtn.style.display = 'block';
@@ -120,14 +110,14 @@ const handleProjectSection = (data) => {
 
         //gitBtn.href = data.github;
         if(data.github == '') {
-          console.log('this is runnig');
+          
           gitBtn.style.display = 'none';
         } else {
           gitBtn.style.display = 'block';
           gitBtn.href = data.itchio;
         }
         toolList = data.toolsUsed;
-        console.log(toolList.split(' '));
+       
         skillSection.innerHTML="";
         toolList.split(' ').forEach(element => {
           let name =tools[element].otherName == '' ? element : tools[element].otherName;
@@ -255,7 +245,7 @@ const handleApplicationSection = (data) => {
         }
      
         if(data.itchio == '') {
-          console.log('this is runnig');
+          
           itchBtn.style.display = 'none';
         } else {
           itchBtn.style.display = 'block';
@@ -264,7 +254,7 @@ const handleApplicationSection = (data) => {
 
         gitBtn.href = data.github;
         toolList = data.toolsUsed;
-        console.log(toolList.split(' '));
+        
         skillSection.innerHTML="";
         toolList.split(' ').forEach(element => {
           let name =tools[element].otherName == '' ? element : tools[element].otherName;
@@ -328,34 +318,31 @@ toggleBtn.addEventListener('click', () => {
 
 
 
-// send emails 
-const serviceID = "service_2cc3ga1"
+// // send emails 
 
-const emailTemplate = "template_refrswc"
+// function sendEmails(){
+//   var params = {
+//     name: document.getElementById('senderName').value,
+//     email: document.getElementById('senderEmail').value,
+//     subject: document.getElementById('senderSubject').value,
+//     message: document.getElementById('senderMessage').value,
+//   }
 
-function sendEmails(){
-  var params = {
-    name: document.getElementById('senderName').value,
-    email: document.getElementById('senderEmail').value,
-    subject: document.getElementById('senderSubject').value,
-    message: document.getElementById('senderMessage').value,
-  }
-
-  if(params.name.trim() == "" || params.email.trim() == "" || params.subject.trim() == "" || params.message.trim() == ""){
-    alert("Please fill out all fields before sending message.");
-  } else {
-  emailjs.send(serviceID,emailTemplate, params).then(
-  res => {
-    document.getElementById('senderName').value = "";
-    document.getElementById('senderSubject').value = "";
-    document.getElementById('senderEmail').value = "";
-    document.getElementById('senderMessage').value = "";
-    console.log(res);
-    alert("Email sent!");
-  }
-).catch((err) => console.log(err));
-  }
-}
+//   if(params.name.trim() == "" || params.email.trim() == "" || params.subject.trim() == "" || params.message.trim() == ""){
+//     alert("Please fill out all fields before sending message.");
+//   } else {
+//   emailjs.send(serviceID,emailTemplate, params).then(
+//   res => {
+//     document.getElementById('senderName').value = "";
+//     document.getElementById('senderSubject').value = "";
+//     document.getElementById('senderEmail').value = "";
+//     document.getElementById('senderMessage').value = "";
+    
+//     alert("Email sent!");
+//   }
+// ).catch((err) => console.log(err));
+//   }
+// }
 
 
 
